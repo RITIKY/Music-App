@@ -11,7 +11,7 @@ const Discover = () => {
   // useSelector gives us the slice of the cake that we want
   const { activeSong, isPlaying, genreListId } = useSelector((state) => state.player);
 
-  const { data, isFetching, error } = useGetSongsByGenreQuery(genreListId || 'POP');
+  const { data, isFetching, error } =  useGetSongsByGenreQuery(genreListId || 'POP');
 
   const genreTitle = genres.find(({ value }) => value === genreListId)?.title;
 
